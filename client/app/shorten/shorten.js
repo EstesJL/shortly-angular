@@ -5,7 +5,9 @@ angular.module('shortly.shorten', [])
   $scope.link = {};
 
   $scope.addLink = function() {
-    $http.post('/api/links').success(function(data) {
+    var url = {};
+    url.url = $scope.url;
+    $http.post('/api/links',url ).success(function(data) {
       console.log('Successfully posted link! ', data);
     });
   };
