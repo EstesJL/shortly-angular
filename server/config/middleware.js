@@ -25,4 +25,11 @@ module.exports = function (app, express) {
   // inject our routers into their respective route files
   require('../users/userRoutes.js')(userRouter);
   require('../links/linkRoutes.js')(linkRouter);
+  
+  ///
+  app.get('/*', function(req,res){
+    res.redirect('/');
+  });
+
+
 };
