@@ -2,14 +2,14 @@
   <ul>
     <li><a href='/#links' class='index'>All Links</a></li>
     <li><a href='/#shorten' class='create'>Shorten</a></li>
-    <li><a href='/#signout' class='signout'>Signout</a></li>
+    <li><a href='/#signout' class='signout'>ignout</a></li>
   </ul>
 </div>
 
 <div id='container'></div>
 
-
-  <div ng-repeat="link in data.links" class="link">
+  <input type="text" ng-model="searchFilter"/>
+  <div ng-repeat="link in data.links | filter: searchFilter" class="link">
     <img src='../assets/redirect_icon.png'/>
     <div class='info'>
       <div class='visits'><span class='count'>{{link.visits}}</span>Visits</div>
