@@ -38,7 +38,7 @@ angular.module('shortly', [
       redirectTo: '/links'
     })
 
-    $locationProvider.html5Mode(true);
+    // $locationProvider.html5Mode(true);
 
 
     // We add our $httpInterceptor into the array
