@@ -16,7 +16,12 @@ angular.module('shortly.links', [])
   $scope.addLink = function() {
     var url = {};
     url.url = $scope.url;
-    Links.shortenLink(url);
+    $scope.url = '';
+    Links.shortenLink(url).then(function() {
+      Links.fetchLinks().then(function(links) {
+        $scope.data.links = links;
+      });
+    });
     TweenMax.to(".titlecolor", 1, {"font-size": 20, delay: 0});
     TweenMax.to(".titlecolor", 1, {"font-size": 30, delay: 1});
   };
