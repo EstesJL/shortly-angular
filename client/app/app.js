@@ -7,7 +7,7 @@ angular.module('shortly', [
   'ngFx',
   'ngAnimate'
 ])
-.config(function($routeProvider, $httpProvider) {
+.config(function($routeProvider, $locationProvider, $httpProvider) {
   $routeProvider
     .when('/', {
       templateUrl: 'app/auth/signin.html',
@@ -35,6 +35,8 @@ angular.module('shortly', [
     .otherwise({
       redirectTo: '/links'
     })
+
+    $locationProvider.html5Mode(true);
 
 
     // We add our $httpInterceptor into the array
@@ -68,7 +70,7 @@ angular.module('shortly', [
   // if it's not valid, we then redirect back to signin/signup
   $rootScope.$on('$routeChangeStart', function (evt, next, current) {
     console.log(next.$$route && !Auth.isAuth());
-    if (next.$$route && /*next.$$route.authenticate &&*/ !Auth.isAuth()) {
+    if (next.$$route && next.$$route.authenticate && !Auth.isAuth()) {
       $location.path('/signin');
     }
   });

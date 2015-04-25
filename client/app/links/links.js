@@ -1,6 +1,6 @@
 angular.module('shortly.links', [])
 
-.controller('LinksController', function ($scope, $http, Links) {
+.controller('LinksController', function ($scope, $http, Links, Auth) {
   
   $scope.data = {};
 
@@ -23,7 +23,11 @@ angular.module('shortly.links', [])
 
   TweenMax.to(".titlecolor", 2, {"font-size": 20, delay: 2});
   TweenMax.to(".titlecolor", 1, {"font-size": 30, delay: 4});
-  TweenMax.to(".titlecolor", 1, {y: "15", delay: 5})
+  TweenMax.to(".titlecolor", 1, {y: "15", delay: 5});
+
+  $scope.signout = function() {
+    Auth.signout();
+  };
 });
 
 

@@ -4,7 +4,6 @@
 angular.module('shortly.auth', [])
 
 .controller('AuthController', function ($scope, $window, $location, Auth) {
-  $window.localStorage.removeItem('com.shortly');
 
   $scope.user = {};
   $scope.signin = function () {
