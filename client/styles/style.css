@@ -2,6 +2,7 @@ body {
   margin: 0;
   margin-top: 10px;
   font-family: arial, sans-serif;
+  background-image: url("../assets/cream_dust.png");
 }
 
 a {
@@ -15,10 +16,31 @@ h1 {
   margin-bottom: 10px;
 }
 
+.navigation-xs {
+  width: 400px;
+  height: 105px;
+  background-image: url("../assets/felt.png");
+  outline: 1px solid gray;
+  margin-top: 20px;
+  margin-bottom: 10px
+}
+
+.navigation-xs .form-control {
+  width: 270px;
+}
+
+.navigation-xs .divInLine-bottom {
+  margin-top: -15px;
+}
+
 .navigation {
-  width: 100%;
-  height: 40px;
-  background-color: #eee;
+  width: 588px;
+  height: 55px;
+  background-image: url("../assets/felt.png");
+  outline: 1px solid gray;
+  margin-top: 20px;
+  margin-bottom: 10px
+
 }
 
 .navigation ul {
@@ -28,17 +50,17 @@ h1 {
 }
 
 .navigation li {
-  float: left;
+  display: inline;
 }
 
-.navigation li a {
+/*.navigation li {
   width: 100px;
-  height: 20px;
+  height: 40px;
   line-height: 20px;
   padding: 10px;
   display: block;
   text-align: center;
-}
+}*/
 
 .navigation li a:hover {
   background-color: #ddd;
@@ -73,6 +95,8 @@ h1 {
   float: right;
   margin-right: 10px;
   margin-left: 20px;
+  border-right: 20px;
+  border-color: black;
 }
 
 .link .visits .count {
@@ -148,4 +172,37 @@ input[type=url]:focus {
 
 .validation-error {
   color: red;
+}
+
+.divInline {
+  display: inline-block;
+}
+
+.title{
+  font-family: 'Finger Paint', cursive;
+}
+.titlecolor{
+  color: #444;
+  display: block;
+  font-size: 60px;
+}
+
+.visits{
+  font-family: 'Finger Paint', cursive;
+}
+
+.shrink{
+  height: 40px;
+    
+}
+
+
+.signout{
+  color: white;
+}
+
+.center-block {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
