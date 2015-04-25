@@ -27,9 +27,9 @@ module.exports = function (app, express) {
   require('../links/linkRoutes.js')(linkRouter);
   
   ///
-  app.get('/*', function(req,res){
-    res.redirect('/');
-  });
+  // app.get('/*', function(req,res){
+  //   res.redirect('/');
+  // });
 
 
 };
