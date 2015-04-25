@@ -5,10 +5,10 @@ angular.module('shortly.links', [])
   $scope.data = {};
 
   $scope.getLinks = function() {
-    $http.get("/api/links").success(function(data){
-      $scope.data.links = data;
+    Links.fetchLinks().then(function(links) {
+      $scope.data.links = links;
     });
   };
   $scope.getLinks();
-  
+
 });
