@@ -10,6 +10,7 @@ angular.module('shortly.auth', [])
     Auth.signin($scope.user)
       .then(function (token) {
         $window.localStorage.setItem('com.shortly', token);
+        $window.localStorage.setItem('username', $scope.user.username);
         $location.path('/links');
       })
       .catch(function (error) {
